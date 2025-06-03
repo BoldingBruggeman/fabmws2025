@@ -12,6 +12,9 @@ jobs:
       defaults:
         run:
           shell: ${{ matrix.os == 'windows-latest' && 'cmd /C call {0}' || 'bash -el {0}' }}
+      env:
+        CMAKE_GENERATOR: Ninja
+        FC: gfortran
       steps:
       - name: Clone repo
         uses: actions/checkout@v4
@@ -34,8 +37,6 @@ jobs:
           git --version
       - name: Build and install pyfabm
         run: pip install -v code/fabm
-        env:
-          CMAKE_GENERATOR: Ninja
       - name: Build and install gotm (Windows)
         run: |
           cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%
@@ -58,8 +59,6 @@ jobs:
         if: matrix.os != 'windows-latest'
       - name: Build and install fabmos
         run: pip install -v code/fabmos
-        env:
-          CMAKE_GENERATOR: Ninja
       - name: Show versions
         run: |
           gotm --version
