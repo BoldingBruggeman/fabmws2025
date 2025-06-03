@@ -2,6 +2,9 @@ name: fabmws2025
 channels:
   - conda-forge
 dependencies:
+  - cython
+  - python-build
+  - pip
   # compilation
   - gfortran
   - netcdf-fortran
@@ -11,4 +14,19 @@ dependencies:
   # analysis
   - parsac
   # visualization
+  - mpi4py
+  - pyyaml
+  - numpy
+  - xarray
+  - netcdf4
+  - scipy
   - pyncview
+  - awex
+  - pygotm
+  - matplotlib
+  - cmocean
+  - cartopy
+  - proj
+  - jupyterlab
+  - ipympl
+  - nc-time-axis
