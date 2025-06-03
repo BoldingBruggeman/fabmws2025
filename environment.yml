@@ -2,18 +2,13 @@ name: fabmws2025
 channels:
   - conda-forge
 dependencies:
-  # prebuilt models
-  - pyfabm
-  - gotm
-  - pygetm
-  - fabmos
-  # analysis
-  - parsac
-  # visualization
-  - pyncview
   # compilation
   - gfortran
   - netcdf-fortran
   - cmake
   - git
   - ninja
+  # analysis
+  - parsac
+  # visualization
+  - pyncview
