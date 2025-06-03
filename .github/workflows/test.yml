@@ -35,7 +35,7 @@ jobs:
           CMAKE_GENERATOR: Ninja
       - name: Build and install gotm
         run: |
-          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DGOTM_USE_STIM=OFF -DGOTM_USE_CVMIX=OFF
+          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja
           cmake --build build/gotm --target install
       - name: Show versions
         run: |
