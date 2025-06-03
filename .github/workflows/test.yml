@@ -35,7 +35,7 @@ jobs:
           CMAKE_GENERATOR: Ninja
       - name: Build and install gotm
         run: |
-          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja
+          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX}
           cmake --build build/gotm --target install
       - name: Build and install pygetm (Windows)
         run: |
