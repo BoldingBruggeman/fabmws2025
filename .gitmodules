@@ -1,0 +1,13 @@
+[submodule "code/fabm"]
+	path = code/fabm
+	url = ../../fabm-model/fabm-plus.git
+[submodule "code/gotm"]
+	path = code/gotm
+	url = ../../gotm-model/code.git
+	branch = v6.0
+[submodule "fabmos"]
+	path = code/fabmos
+	url = ../fabmos
+[submodule "code/pygetm"]
+	path = code/pygetm
+	url = ../getm-rewrite
