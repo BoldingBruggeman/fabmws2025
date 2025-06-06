@@ -72,7 +72,7 @@ Test your installation by running the following in a terminal window:
    ```
    These three commands should complete without errors.
 
-### Observations
+## Observations
 
 Observations used for calibration (parsac) or data assimilation (EAT) must be provided as a whitespace-separated tab-separated
 text file with one line per observation. Each observed variable must use a separate file.
