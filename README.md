@@ -18,10 +18,27 @@ Ensure you have Anaconda:
 
 If you *do not* have Anaconda, [install Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/).
 
-### Step 2. Install software
+### Step 2. Download this repository
 
-1. Create an isolated `fabmws2025` environment with the model and visualization tools.
-   To do this, open a terminal window (on Windows, use the "Anaconda prompt" from the start menu) and type:
+You will need the [Git](https://en.wikipedia.org/wiki/Git) command line tool. To verify this is installed, open a terminal window (on Windows, use the "Anaconda prompt" from the start menu) and type `git --version` and press Enter.
+If this returns the git version, you are all set. If it returns an error such as `'git' is not recognized as an internal or external command`,
+please install git first with `conda install conda-forge::git`
+
+Now get a copy of all necessary software and setups by "cloning" the workshop repository:
+
+```
+git clone --recurse-submodules https://github.com/BoldingBruggeman/fabmws2025.git
+```
+
+This will create a new directory `fabmws2025`.
+In subsequent steps we will assume you are in this directory.
+When you are in a terminal window, you cna enter it with `cd fabmws2025`.
+
+### Step 3. Install software
+
+1. Create an isolated `fabmws2025` environment with all packages for model compilaiton, analysis and visualization.
+   To do this, open a terminal window (on Windows, use the "Anaconda prompt" from the start menu), ensure you are in the `fabmws2025` directory, and type:
+
    ```
    conda env create -f environment.yml
    ```
@@ -30,9 +47,24 @@ If you *do not* have Anaconda, [install Miniconda](https://docs.anaconda.com/min
    Should this fail because of lack of permissions, we recommend you [install Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/).
    After you have an up-to-date conda, retry the `conda create ...` command.
 
-   The above command installs pre-compiled versions of [GOTM](https://gotm.net), [pyfabm](https://fabm.net/python), [pygetm](https://github.com/BoldingBruggeman/getm-rewrite), [fabmos](https://github.com/BoldingBruggeman/fabmos) and [parsac](https://github.com/BoldingBruggeman/parsac). They include reference versions of the biogeochemical models [ERSEM](https://github.com/pmlmodelling/ersem), [ECOSMO](https://doi.org/10.5194/gmd-15-3901-2022), [PISCES](https://www.pisces-community.org/), [iHAMOCC](https://doi.org/10.5194/gmd-13-2393-2020), [ERGOM](https://ergom.net/), and [MOPS](https://doi.org/10.5194/gmd-8-2929-2015), among others.
+2. From the terminal window and `fabmws2025` directory, compile the models and tools. On Windows, use:
 
-2. Test your installation by running the following in a terminal window:
+   ```
+   conda activate fabmws2025
+   install
+   ```
+
+   And on Mac and Linux:
+
+   ```
+   conda activate fabmws2025
+   ./install
+   ```
+
+
+### Step 4. Test your installation
+
+Test your installation by running the following in a terminal window:
    ```
    conda activate fabmws2025
    gotm --version

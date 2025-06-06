@@ -35,30 +35,12 @@ jobs:
           gfortran --version
           cmake --version
           git --version
-      - name: Build and install pyfabm
-        run: pip install -v code/fabm
-      - name: Build and install gotm (Windows)
-        run: |
-          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%
-          cmake --build build/gotm --target install
+      - name: Build and install (Windows)
+        run: install.bat
         if: matrix.os == 'windows-latest'
-      - name: Build and install gotm (Linux, Mac)
-        run: |
-          cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX}
-          cmake --build build/gotm --target install
+      - name: Build and install (Linux, Mac)
+        run: ./install
         if: matrix.os != 'windows-latest'
-      - name: Build and install pygetm (Windows)
-        run: |
-          cd code/pygetm
-          install.bat
-        if: matrix.os == 'windows-latest'
-      - name: Build and install pygetm (Linux, Mac)
-        run: |
-          cd code/pygetm
-          source ./install
-        if: matrix.os != 'windows-latest'
-      - name: Build and install fabmos
-        run: pip install -v code/fabmos
       - name: Show versions
         run: |
           gotm --version
