@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export CMAKE_GENERATOR=Ninja
+export FC=gfortran
+
 pip install -v code/fabm
 
 cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX}
