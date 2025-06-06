@@ -6,7 +6,7 @@ dependencies:
   - python-build
   - pip
   # compilation
-  - gfortran
+  - gfortran != 15.1.*
   - netcdf-fortran
   - cmake
   - git
