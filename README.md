@@ -20,7 +20,7 @@ If you *do not* have Anaconda, [install Miniconda](https://docs.anaconda.com/min
 
 ### Step 2. Download this repository
 
-You will need the [Git](https://en.wikipedia.org/wiki/Git) command line tool. To verify this is installed, open a terminal window (on Windows, use the "Anaconda prompt" from the start menu) and type `git --version` and press Enter.
+You will need the [Git](https://en.wikipedia.org/wiki/Git) command line tool. To verify this is installed, open a terminal window (on Windows, use the "Anaconda prompt" from the start menu), type `git --version` and press Enter.
 If this returns the git version, you are all set. If it returns an error such as `'git' is not recognized as an internal or external command`,
 please install git first with `conda install conda-forge::git`
 
@@ -45,7 +45,7 @@ When you are in a terminal window, you cna enter it with `cd fabmws2025`.
 
    If you experience any issue with the above, we recommend you first execute `conda update conda` to ensure your conda is up to date.
    Should this fail because of lack of permissions, we recommend you [install Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/).
-   After you have an up-to-date conda, retry the `conda create ...` command.
+   After you have an up-to-date conda, retry the `conda env create ...` command.
 
 2. From the terminal window and `fabmws2025` directory, compile the models and tools. On Windows, use:
 
@@ -75,8 +75,8 @@ Test your installation by running the following in a terminal window:
 ## Observations
 
 Observations used for calibration (parsac) or data assimilation (EAT) must be provided as a whitespace-separated tab-separated
-text file with one line per observation. Each observed variable must use a separate file.
-Each line must contain:
+text file. Each observed variable must use a separate file.
+Each observation must be on its own line, which should contain:
 * the date + time as `YYYY-mm-dd HH:MM:SS`. For instance, a value of `2000-05-08 06:20:00` for 6:20 am on 8 May 2000.
 * _only if you are providing depth-dependent observations:_ the depth (m) at which the
    observation was taken. It decreases downwards from the water surface, e.g., a
