@@ -9,7 +9,7 @@ import fabmos.input.riverlist
 import pandas as pd
 
 script_dir = os.path.dirname(__file__)
-tm_config_dir = os.path.join(script_dir, "../../setups/global-fabmos"
+tm_config_dir = os.path.join(script_dir, "../../setups/global-fabmos")
 calendar = "360_day"  # any valid calendar recognized by cftime, see https://cfconventions.org/cf-conventions/cf-conventions.html#calendar
 
 fabm_yaml = os.path.join(
