@@ -45,7 +45,6 @@ jobs:
         run: |
           gotm --version
           python show_versions.py
-          eat-gotm --version
       - name: Run GOTM
         run: |
           cd setups/northsea-gotm
@@ -58,3 +57,5 @@ jobs:
         run: mpiexec -n 2 python .github/workflows/run_global.py
       - name: Run pygetm North Sea - parallel
         run: mpiexec -n 2 python .github/workflows/run_north_sea.py setups/northsea-pygetm
+      - name: Test EAT
+        run: eat-gotm --version

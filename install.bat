@@ -12,4 +12,4 @@ call code\pygetm\install.bat
 
 pip install -v code\fabmos
 
-call code\eat\install.bat
+REM call code\eat\install.bat
