@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+conda install -y -c conda-forge mpich
+
 export CMAKE_GENERATOR=Ninja
 export FC=gfortran
 
