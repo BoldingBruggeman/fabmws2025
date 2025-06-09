@@ -12,5 +12,5 @@ source code/pygetm/install
 
 pip install -v code/fabmos
 
-rm code/eat/cmake/Modules/FindMPI.cmake
+export FC=mpifort
 source code/eat/install
