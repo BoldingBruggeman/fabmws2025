@@ -50,5 +50,7 @@ jobs:
         run: python .github/workflows/run_global.py
       - name: Run pygetm North Sea
         run: python .github/workflows/run_north_sea.py setups/northsea-pygetm
-
-
+      - name: Run TMM global - parallel
+        run: mpiexec -n 2 python .github/workflows/run_global.py
+      - name: Run pygetm North Sea - parallel
+        run: mpiexec -n 2 python .github/workflows/run_north_sea.py setups/northsea-pygetm
