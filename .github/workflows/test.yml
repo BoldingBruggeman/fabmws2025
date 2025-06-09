@@ -36,10 +36,14 @@ jobs:
           cmake --version
           git --version
       - name: Build and install (Windows)
-        run: install.bat
+        run: |
+          install.bat
+          dir build
         if: matrix.os == 'windows-latest'
       - name: Build and install (Linux, Mac)
-        run: ./install
+        run: |
+          ./install
+          ls -l build
         if: matrix.os != 'windows-latest'
       - name: Show versions
         run: |
