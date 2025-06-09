@@ -11,3 +11,6 @@
 [submodule "code/pygetm"]
 	path = code/pygetm
 	url = ../getm-rewrite
+[submodule "code/eat"]
+	path = code/eat
+	url = ../eat

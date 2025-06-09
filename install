@@ -11,3 +11,5 @@ cmake --build build/gotm --target install
 source code/pygetm/install
 
 pip install -v code/fabmos
+
+source code/eat/install

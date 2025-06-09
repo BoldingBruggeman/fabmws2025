@@ -9,3 +9,5 @@ cmake --build build/gotm --target install
 call code\pygetm\install.bat
 
 pip install -v code\fabmos
+
+call code\eat\install.bat
