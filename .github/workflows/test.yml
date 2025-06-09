@@ -46,6 +46,10 @@ jobs:
           gotm --version
           python show_versions.py
           eat-gotm --version
+      - name: Run GOTM
+        run: |
+          cd setups/northsea-gotm
+          gotm
       - name: Run TMM global
         run: python .github/workflows/run_global.py
       - name: Run pygetm North Sea
