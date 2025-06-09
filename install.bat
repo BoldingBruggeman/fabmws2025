@@ -1,7 +1,7 @@
 set CMAKE_GENERATOR=Ninja
 set FC=gfortran
 
-conda install -y -c conda-forge impi-devel
+call conda install -y -c conda-forge impi-devel
 
 pip install -v code\fabm
 
