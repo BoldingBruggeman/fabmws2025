@@ -21,4 +21,4 @@ echo build_temp=../../build/fabmos >> code/fabmos/setup.cfg
 echo cmake_opts=-DFABM_BASE=../fabm >> code/fabmos/setup.cfg
 pip install -v code/fabmos
 
-source code/eat/install -DFABM_BASE=../fabm
+source code/eat/install -DFABM_BASE=code/fabm
