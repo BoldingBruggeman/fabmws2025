@@ -12,5 +12,4 @@ source code/pygetm/install
 
 pip install -v code/fabmos
 
-export FC=mpifort
 source code/eat/install

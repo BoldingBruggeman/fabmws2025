@@ -30,3 +30,4 @@ dependencies:
   - jupyterlab
   - ipympl
   - nc-time-axis
+  - mpich
