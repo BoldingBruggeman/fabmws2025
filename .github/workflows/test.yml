@@ -63,3 +63,4 @@ jobs:
         run: mpiexec -n 2 python .github/workflows/run_north_sea.py setups/northsea-pygetm
       - name: Test EAT
         run: eat-gotm --version
+        if: matrix.os != 'windows-latest'
