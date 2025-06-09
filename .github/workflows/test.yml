@@ -45,4 +45,9 @@ jobs:
         run: |
           gotm --version
           python show_versions.py
+      - name: Run TMM global
+        run: python .github/workflows/run_global.py
+      - name: Run pygetm North Sea
+        run: python .github/workflows/run_north_sea.py setups/northsea-pygetm
+
 
