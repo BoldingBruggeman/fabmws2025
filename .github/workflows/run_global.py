@@ -25,7 +25,7 @@ sim.fabm.get_dependency("surface_air_pressure").set(101325.0)
 
 # Load rivers from https://doi.org/10.1029/96JD00932
 rivers = pd.read_fwf(
-    os.path.join(script_dir, "rivrstat.txt"),
+    os.path.join(script_dir, "../../code/fabmos/examples/tmm/rivrstat.txt"),
     skiprows=7,
     usecols=(1, 2, 3, 4, 6),
     names=("name", "country", "lat", "lon", "flow"),
