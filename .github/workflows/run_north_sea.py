@@ -77,6 +77,6 @@ output = sim.output_manager.add_netcdf_file(
 output.request("temp", "salt", "tke", "num", "SS", "NN")
 
 sim.start(datetime.datetime(2006, 1, 2), timestep=60.0, split_factor=30, report=60)
-while sim.time < datetime.datetime(2006, 1, 10):
+while sim.time < datetime.datetime(2006, 1, 4):
     sim.advance()
 sim.finish()

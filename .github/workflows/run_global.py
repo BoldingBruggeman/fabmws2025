@@ -49,7 +49,7 @@ out = sim.output_manager.add_netcdf_file(
 out.request("runoff_source", *sim.fabm.default_outputs, time_average=True)
 
 start = cftime.datetime(2000, 1, 1, calendar=calendar)
-stop = cftime.datetime(2001, 1, 1, calendar=calendar)
+stop = cftime.datetime(2000, 2, 1, calendar=calendar)
 sim.start(start, timestep=12 * 3600)
 while sim.time < stop:
     sim.advance()
