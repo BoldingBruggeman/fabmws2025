@@ -12,6 +12,7 @@ parser.add_argument(
     "setup_dir",
     help="Path to configuration files (NorthSea directory from https://sourceforge.net/p/getm/getm-setups)",
     default=".",
+    nargs="?",
 )
 args = parser.parse_args()
 
