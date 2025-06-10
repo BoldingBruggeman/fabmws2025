@@ -10,6 +10,7 @@ pip install -v code\fabm
 cmake -B build/gotm -S code/gotm -DFABM_BASE=code/fabm -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%
 cmake --build build/gotm --target install
 
+echo [build_ext] > code\pygetm\python\setup.cfg
 echo build_temp=../../../build/pygetm >> code\pygetm\python\setup.cfg
 echo cmake_opts=-DFABM_BASE=../../fabm >> code\pygetm\python\setup.cfg
 call code\pygetm\install.bat
