@@ -1,7 +1,7 @@
 set CMAKE_GENERATOR=Ninja
 set FC=gfortran
 
-call conda install -y -c conda-forge impi-devel
+REM call conda install -y -c conda-forge impi-devel
 
 echo [build_ext] > code\fabm\setup.cfg
 echo build_temp=../../build/pyfabm >> code\fabm\setup.cfg
