@@ -6,7 +6,7 @@ It does not require administrator/root privileges to install.
 We will work in a terminal window while installing necessary files and running the models.
 On Windows, use the "Anaconda prompt" from the start menu (instructions on how to install that below).
 
-We will be editing text files (yaml files and Python scripts) with model configurations. This can be done with many different editors, e.g., [Visual Studio Code](https://code.visualstudio.com/), Notepad on Windows, `vi` on Linux/Mac. We recommend using one you are already familiar with.
+We will be editing text files ([YAML](https://en.wikipedia.org/wiki/YAML), [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), [Fortran](https://en.wikipedia.org/wiki/Fortran)) with model code and configurations. This can be done with many different editors, e.g., [Visual Studio Code](https://code.visualstudio.com/), Notepad on Windows, `vi` on Linux/Mac. We recommend using one you are already familiar with.
 
 ## Installation
 
