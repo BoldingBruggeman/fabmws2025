@@ -32,7 +32,7 @@ git clone --recurse-submodules https://github.com/BoldingBruggeman/fabmws2025.gi
 
 This will create a new directory `fabmws2025`.
 In subsequent steps we will assume you are in this directory.
-When you are in a terminal window, you cna enter it with `cd fabmws2025`.
+When you are in a terminal window, you can enter it with `cd fabmws2025`.
 
 ### Step 3. Install software
 
