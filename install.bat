@@ -1,5 +1,5 @@
 set CMAKE_GENERATOR=Ninja
-set FC=gfortran
+set FC=x86_64-w64-mingw32-gfortran.exe
 
 REM call conda install -y -c conda-forge impi-devel
 
