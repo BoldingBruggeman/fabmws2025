@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 conda install -y -c conda-forge mpich
 
 export CMAKE_GENERATOR=Ninja
@@ -23,3 +25,5 @@ echo cmake_opts=-DFABM_BASE=../fabm >> code/fabmos/setup.cfg
 pip install -v code/fabmos
 
 source code/eat/install -DFABM_BASE=code/fabm
+
+set +e
