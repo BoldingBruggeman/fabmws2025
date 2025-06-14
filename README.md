@@ -72,6 +72,35 @@ Test your installation by running the following in a terminal window:
    ```
    These three commands should complete without errors.
 
+### Updating to the latest version
+
+To update the code and configurations:
+
+```
+git pull
+git submodule update --init --recursive
+```
+
+To update the conda environment:
+
+```
+conda env update -f environment.yml
+```
+
+To rebuild (compile) the software on Windows:
+
+```
+conda activate fabmws2025
+install
+```
+
+And to rebuild on Mac and Linux:
+
+```
+conda activate fabmws2025
+./install
+```
+
 ## Observations
 
 Observations used for calibration (parsac) or data assimilation (EAT) must be provided as a whitespace-separated tab-separated
