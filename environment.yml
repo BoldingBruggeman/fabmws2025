@@ -9,7 +9,6 @@ dependencies:
   - gfortran != 15.1.*
   - netcdf-fortran
   - cmake
-  - git
   - ninja
   # analysis
   - parsac
