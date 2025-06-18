@@ -35,6 +35,7 @@ sim = pygetm.Simulation(
     ),
     Dcrit=0.2,
     Dmin=0.05,
+    #fabm="fabm.yaml",
 )
 
 sim.logger.info("Reading 2D boundary data from file")
@@ -70,13 +71,20 @@ sim.airsea.u10.set(pygetm.input.from_nc(met_path, "u10"))
 sim.airsea.v10.set(pygetm.input.from_nc(met_path, "v10"))
 sim.airsea.tp.set(pygetm.input.from_nc(met_path, "precip"))
 
+# Additional FABM dependencies can be set here if needed
+# For example:
+# sim.fabm.get_dependency("surface_air_pressure").set(101325.0)
+# sim.fabm.get_dependency("mole_fraction_of_carbon_dioxide_in_air").set(280.0)
+# sim.fabm.get_dependency("absorption_of_silt").set(0.02)
+
 sim.logger.info("Setting up output")
 output = sim.output_manager.add_netcdf_file(
     "north_sea_3d.nc", interval=datetime.timedelta(days=1)
 )
 output.request("temp", "salt", "tke", "num", "SS", "NN")
+#output.request(*sim.fabm.state_variables)
 
 sim.start(datetime.datetime(2006, 1, 2), timestep=60.0, split_factor=30, report=60)
-while sim.time < datetime.datetime(2007, 1, 1):
+while sim.time < datetime.datetime(2006, 1, 6):
     sim.advance()
 sim.finish()

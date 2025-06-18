@@ -2,3 +2,4 @@
 getm-????.log
 /setups/pyfabm/.ipynb_checkpoints
 /setups/northsea-pygetm/*.nc
+/setups/global-fabmos/*.nc
