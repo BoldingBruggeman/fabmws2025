@@ -14,3 +14,6 @@
 [submodule "code/eat"]
 	path = code/eat
 	url = ../eat
+[submodule "setups/eat"]
+	path = setups/eat
+	url = ../eat-paper-applications.git
